@@ -34,13 +34,13 @@ gulp.task("style", function(err) {
 });
 
 // Static Server + watching less/html/img/js files
-gulp.task("serve", ["less"], function() {
+gulp.task("serve", ["style"], function() {
 
     browserSync.init(null, {
       proxy: "1-barbershop"
     });
 
-    gulp.watch("src/css/**/*.less", ["style"]);
+    gulp.watch("src/less/**/*.less", ["style"]);
     gulp.watch("src/*.html").on("change", browserSync.reload);
     gulp.watch("src/img/**/*.{png,jpg,gif,svg}").on("change", browserSync.reload);
     gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
