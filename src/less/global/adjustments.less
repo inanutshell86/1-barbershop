@@ -11,7 +11,7 @@ body {
     font-family: @base-font;
     line-height: 27px;
     -webkit-font-smoothing: antialiased;
-    background: @bg-color;
+    background-color: @bg-color;
 }
 
 .wrapper {
@@ -59,6 +59,21 @@ a {
 	  text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
-  display: none;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  bottom: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
