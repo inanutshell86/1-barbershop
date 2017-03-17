@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* Mobile layout by default */
-        background-image: url( "/img/pixel-glass/320.jpg" );
+        background-image: url( "/img/pixel-glass/320-nav.jpg" );
       }
       /* Tablet */
       @media ( min-width: 768px ) {
@@ -50,7 +50,11 @@
         <h1 class="visually-hidden">Барбершоп &laquo;Бородинский&raquo; - истинно мужская классика</h1>
 
         <div class="page-header__logo">
-          <img src="http://placehold.it/226x30" width="226" height="30" alt="Барбершоп &quot;Бородинский&quot;">
+          <picture class="page-header__adaptive-pic">
+            <source media="( min-width: 1200px )" srcset="img/content/logotype-desktop.svg">
+            <source media="( min-width: 768px )" srcset="img/content/logotype-tablet.svg">
+            <img src="img/content/logotype-mobile.svg" width="226" height="30" alt="Барбершоп &quot;Бородинский&quot;">
+          </picture>
         </div>
 
         <nav class="main-nav  main-nav--closed main-nav--nojs">
