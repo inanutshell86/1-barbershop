@@ -1,22 +1,30 @@
-.page-header {
+.page-header__logo {
+  height: 85px;
 
-  @media (min-width: @screen-md) {
+  text-align: center;
+}
+
+.page-header__adaptive-pic {
+  display: block;
+  width: 100%;
+  height: 85px;
+}
+
+.page-header__adaptive-pic img {
+  width: 230px;
+  height: 85px;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+@media (min-width: @screen-md) {
+  .page-header {
     position: relative;
 
     min-height: 70px;
     padding-bottom: 400px;
 
-    background-color: @color-black;
-  }
-
-  @media (min-width: @screen-xl) {
-    padding-bottom: 648px;
-  }
-
-  &__logo {
-    text-align: center;
-
-    @media (min-width: @screen-md) {
+    &__logo {
       position: absolute;
       bottom: 0;
 
@@ -26,31 +34,15 @@
       background-color: @color-black;
       background-image: url("../../img/decor/bg-header-tablet.jpg");
       background-repeat: no-repeat;
-      background-position: center -9px;
-    }
-
-    @media (min-width: @screen-xl) {
-      height: 648px;
-
-      background-image: url("../../img/decor/bg-header-desktop.jpg");
-      background-position: center 0;
+      background-position: center -58px;
       background-size: cover;
     }
-  }
 
-  &__adaptive-pic {
-    display: block;
-    width: 100%;
-    height: 85px;
-  }
+    &__adaptive-pic {
+      height: 400px;
+    }
 
-  &__adaptive-pic img {
-    width: 230px;
-    height: 85px;
-    padding-left: 5px;
-    padding-top: 3px;
-
-    @media (min-width: @screen-md) {
+    &__adaptive-pic img {
       position: absolute;
       bottom: 257px;
       left: 50%;
@@ -61,9 +53,27 @@
 
       transform: translateX(-50%);
     }
+  }
+}
 
-    @media (min-width: @screen-xl) {
-      bottom: 438px;
+@media (min-width: @screen-xl) {
+  .page-header {
+    padding-bottom: 648px;
+
+    &__logo {
+      height: 648px;
+
+      background-image: url("../../img/decor/bg-header-desktop.jpg");
+      background-position: center -61px;
+      background-size: cover;
+    }
+
+    &__adaptive-pic {
+      height: 648px;
+    }
+
+    &__adaptive-pic img {
+      bottom: 436px;
     }
   }
 }
