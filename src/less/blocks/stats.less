@@ -1,5 +1,8 @@
 .stats {
-  .container();
+
+  &__wrapper {
+    .container();
+  }
 
   &__header {
     padding: 28px 38px 27px 39px;
@@ -108,10 +111,14 @@
 
 @media (min-width: @screen-md) {
   .stats {
+    background-color: @bg-color-stats;
+  }
+
+  .stats__wrapper {
     position: relative;
     z-index: 1;
 
-    margin-top: -187px;
+    margin-top: -184px;
   }
 
   .stats__header {
@@ -212,7 +219,7 @@
 }
 
 @media (min-width: @screen-xl) {
-  .stats {
+  .stats__wrapper {
     .clearfix();
 
     margin-top: -159px;
