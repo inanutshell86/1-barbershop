@@ -1,3 +1,4 @@
+// Navigation mobile version toggle
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 
@@ -11,4 +12,23 @@ navToggle.addEventListener('click', function() {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
+});
+
+// Button show news
+var btnShowAll = document.querySelector(".news__to-all");
+var news = document.querySelectorAll(".news__item");
+
+btnShowAll.addEventListener('click', function(a) {
+  a.preventDefault();
+  [].forEach.call(news, function(elem) {
+    if (elem.classList.contains('news__item--closed')) {
+      btnShowAll.innerHTML = 'Скрыть все';
+      elem.classList.remove('news__item--closed');
+      elem.classList.add('news__item--opened');
+    } else {
+      btnShowAll.innerHTML = 'Показать все';
+      elem.classList.add('news__item--closed');
+      elem.classList.remove('news__item--opened');
+    }
+  });
 });
