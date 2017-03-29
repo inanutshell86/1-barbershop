@@ -23,13 +23,10 @@
   .container();
 
   padding-top: 15px;
+  padding-bottom: 3px;
 }
 
 .slider__input {
-  display: none;
-}
-
-.slider__toggles {
   display: none;
 }
 
@@ -93,10 +90,6 @@
     background-color: @bg-color-advantages-mob;
   }
 
-  .slider__toggles {
-    display: block;
-  }
-
   .slider__item {
     display: none;
   }
@@ -105,29 +98,6 @@
   #advantages-input-2:checked ~ .advantages__list .advantages__item--cool,
   #advantages-input-3:checked ~ .advantages__list .advantages__item--expensive {
     display: block;
-  }
-
-  .slider__toggles {
-    text-align: center;
-  }
-
-  .slider__toggles label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 19px;
-    border: 1px solid @color-white;
-
-    background-color: transparent;
-
-    font-size: 0;
-    transform: rotate(45deg);
-    transition: background-color 0.2s;
-    cursor: pointer;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   #advantages-input-1:checked ~ .slider__toggles label[for="advantages-input-1"],
@@ -190,6 +160,11 @@
   .advantages__item p {
     text-align: left;
   }
+
+  .advantages__toogles {
+    display: none;
+  }
+
 }
 
 @media (min-width: @screen-xl) {
