@@ -9,6 +9,7 @@
   text-align: center;
   text-transform: uppercase;
   color: @color-black;
+  cursor: pointer;
 
   &:hover {
     border-color: @color-border-btn-hvr;
@@ -17,5 +18,82 @@
   &:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: @bg-color-btn-active;
+  }
+
+  &--log-in {
+    float: left;
+    background-color: @bg-color-menu-active;
+    color: @color-white;
+    padding: 12px 0;
+    width: 130px;
+
+    &:hover {
+      background-color: @bg-color-menu-open;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+  }
+
+  &--close {
+    float: right;
+    padding: 12px 0;
+    width: 130px;
+  }
+
+  &--contacts {
+    min-height: 50px;
+    padding: 9px 70px;
+    margin-top: 21px;
+    border-color: @color-border-footer-btn;
+    background-color: @bg-color-footer;
+    color: @color-white;
+
+    &:hover {
+      border-color: @color-border-footer-btn-hvr;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: @bg-color-footer-hvr;
+      border: none;
+    }
+  }
+
+  &--copyright {
+    min-height: 50px;
+    margin-top: 13px;
+    padding: 12px 70px;
+    border-color: @color-border-footer-btn;
+    background-color: @bg-color-footer;
+    color: @color-white;
+
+    &:hover {
+      border-color: @color-border-footer-btn-hvr;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: @bg-color-footer-hvr;
+      border: none;
+    }
+  }
+}
+
+@media @tablet-width {
+  .btn--contacts {
+    display: inline;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: left;
+    text-transform: none;
+    font-family: "PTSansNarrowRegular";
+  }
+
+  .btn--copyright {
+    padding: 12px 26px;
   }
 }

@@ -32,3 +32,23 @@ btnShowAll.addEventListener('click', function(a) {
     }
   });
 });
+
+// Show modal form window
+var btnLogin = document.querySelector('.main-nav__user-login');
+var modalForm = document.querySelector('.modal-personal');
+
+btnLogin.addEventListener('click', function showModalForm(a) {
+  a.preventDefault();
+  navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
+
+  modalForm.classList.add('modal-personal--show');
+});
+
+// Close modal form window
+var btnClose = document.querySelector('.btn--close');
+
+btnClose.addEventListener('click', function closeModalForm(a) {
+  a.preventDefault();
+  modalForm.classList.remove('modal-personal--show');
+});
