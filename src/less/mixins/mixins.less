@@ -21,3 +21,15 @@
     width: 960px;
   }
 }
+
+.tablet(@rules) {
+  @media @tablet-width {
+      @rules();
+  }
+}
+
+.desktop(@rules) {
+  @media @desktop-width {
+      @rules();
+  }
+}
