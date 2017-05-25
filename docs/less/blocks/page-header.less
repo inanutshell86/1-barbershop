@@ -1,0 +1,136 @@
+.page-header__logo {
+  height: 85px;
+
+  text-align: center;
+}
+
+.page-header__adaptive-pic {
+  display: block;
+  width: 100%;
+  height: 85px;
+}
+
+.page-header__adaptive-pic img {
+  width: 230px;
+  height: 85px;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+
+@media (min-width: @screen-md) {
+  .page-header {
+    position: relative;
+
+    min-height: 70px;
+    padding-bottom: 400px;
+
+    &__logo {
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      height: 400px;
+
+      background-color: @color-black;
+      background-image: url("img/decor/bg-header-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center -58px;
+      background-size: cover;
+    }
+
+    &__logo--inner {
+      height: 215px;
+      background-image: url("img/decor/bg-tablet-inner.jpg");
+    }
+
+    &__adaptive-pic {
+      height: 400px;
+    }
+
+    &__adaptive-pic--inner {
+      height: 215px;
+    }
+
+    &__adaptive-pic img {
+      position: absolute;
+      bottom: 257px;
+      left: 50%;
+
+      width: 370px;
+      height: auto;
+      padding: 0;
+
+      transform: translateX(-50%);
+    }
+
+    &__adaptive-pic--inner img {
+      bottom: 74px;
+    }
+
+    &--inner {
+      padding-bottom: 215px;
+    }
+  }
+
+  .page-header--inner {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 42px;
+      background-image: url("img/decor/bg-mask-inner.svg");
+      background-position: center;
+      background-size: 100% 100%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (min-width: @screen-xl) {
+  .page-header {
+    padding-bottom: 648px;
+
+    &__logo {
+      height: 648px;
+
+      background-image: url("img/decor/bg-header-desktop.jpg");
+      background-position: center -61px;
+      background-size: cover;
+    }
+
+    &__logo--inner {
+      height: 307px;
+      background-image: url("img/decor/bg-desktop-inner.jpg");
+    }
+
+    &__adaptive-pic {
+      height: 648px;
+    }
+
+    &__adaptive-pic--inner {
+      height: 307px;
+    }
+
+    &__adaptive-pic img {
+      bottom: 436px;
+    }
+
+    &__adaptive-pic--inner img {
+      bottom: 99px;
+    }
+
+    &--inner {
+      padding-bottom: 307px;
+    }
+  }
+
+  .page-header--inner {
+    &::after {
+      height: 65px;
+    }
+  }
+}
