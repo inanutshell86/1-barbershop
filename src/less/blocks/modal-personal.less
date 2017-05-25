@@ -1,0 +1,169 @@
+.modal-personal {
+  position: absolute;
+  top: 135px;
+  right: 50%;
+  display: none;
+  width: 320px;
+  height: 408px;
+  transform: translateX(50%);
+  background-color: @bg-color-modal;
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.75);
+
+  &--show {
+    display: block;
+  }
+
+  &__header {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    margin-top: 32px;
+    text-align: center;
+    width: 280px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 14px;
+
+    font-size: @font-size-big;
+    line-height: @line-height-medium;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: @font-size-base;
+    margin: 0;
+  }
+
+  &__form {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+  }
+
+  &__user {
+    margin-bottom: 22px;
+    width: 100%;
+  }
+
+  &__field {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 6px;
+    padding: 9px 14px;
+    padding-right: 42px;
+    padding-left: 17px;
+    color: @color-black;
+    border: 1px solid @color-border-modal;
+    font-size: @font-size-base;
+    line-height: @line-height-medium;
+    outline: 0;
+
+    &::placeholder {
+      font-family: 'PTSansNarrowRegular', 'Arial', sans-serif;
+      color: @color-black;
+    }
+
+  }
+
+  &__settings {
+    .clearfix();
+
+    display: block;
+    margin-bottom: 33px;
+    width: 100%;
+  }
+
+  &__caption {
+
+    &--login,
+    &--password {
+      position: relative;
+      font-size: 0;
+      line-height: 0;
+
+      &::after {
+        background-repeat: no-repeat;
+        content: "";
+        position: absolute;
+      }
+
+    }
+
+    &--login::after {
+      background-image: url("../img/decor/user.svg");
+      height: 15px;
+      right: 18px;
+      bottom: 24px;
+      width: 15px;
+    }
+
+    &--password::after {
+      background-image: url("../img/decor/locked.png");
+      height: 17px;
+      right: 19px;
+      bottom: 23px;
+      width: 15px;
+    }
+
+    &--remember {
+      float: left;
+      padding-left: 48px;
+      font-weight: normal;
+      position: relative;
+
+      &::before {
+        background-color: @color-white;
+        border: 1px solid @color-border-modal;
+        bottom: 50%;
+        content: "";
+        height: 31px;
+        left: 0;
+        position: absolute;
+        transform: translateY(50%);
+        width: 31px;
+      }
+
+      .modal-personal__field--remember:checked + &::after {
+        background-image: url("../img/decor/tick.svg");
+        background-repeat: no-repeat;
+        bottom: 50%;
+        content: "";
+        height: 16px;
+        left: 6px;
+        position: absolute;
+        transform: translateY(50%);
+        width: 22px;
+      }
+
+      &:hover::before,
+      .modal-personal__field--remember:checked + &:hover::after {
+        border-color: @color-button-bg-active;
+      }
+
+      .modal-personal__field--remember:checked + &:active::before,
+      .modal-personal__field--remember:checked + &:active::after {
+        background-color: @color-button-bg-active;
+        background-image: none;
+      }
+
+    }
+
+  }
+
+  &__forgot {
+    float: right;
+    color: @color-black;
+    text-decoration: underline;
+  }
+
+  &__in-personal {
+    display: none;
+  }
+
+  &__btns {
+    .clearfix();
+  }
+
+}
