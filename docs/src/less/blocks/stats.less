@@ -1,0 +1,266 @@
+.stats {
+
+  &__wrapper {
+    .container();
+  }
+
+  &__header {
+    padding: 28px 38px 27px 39px;
+
+    color: @color-black;
+    background-color: @color-white;
+  }
+
+  &__slogan {
+    display: block;
+    margin-bottom: 14px;
+
+    font-family: "PTSansNarrowBold";
+    font-size: @font-size-big;
+    line-height: @line-height-medium;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__intro {
+    margin: 0;
+
+    font-size: @font-size-medium;
+    line-height: @line-height-base;
+    text-align: center;
+  }
+
+  &__legend {
+    display: block;
+
+    font-size: @font-size-medium;
+    line-height: @line-height-base;
+  }
+
+  &__legend sup {
+    top: -0.25em;
+
+    font-size: 90%;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__table tr {
+    color: @color-white;
+    background-color: @bg-color-tr-odd;
+
+    &:nth-child(2) {
+      background-color: @bg-color-tr-even;
+    }
+
+    &:nth-child(3) {
+      background-color: @bg-color-tr-third;
+    }
+
+    &:nth-child(4) {
+      background-color: @bg-color-tr-odd;
+    }
+  }
+
+  &__value,
+  &__field {
+    width: 50%;
+    padding: 19px;
+
+    vertical-align: top;
+  }
+
+  &__value {
+    padding-right: 0;
+
+    font-family: "PTSansNarrowBold";
+    font-size: @font-size-extra;
+    line-height: @line-height-big;
+  }
+
+  &__value sup {
+    top: -0.35em;
+
+    margin-left: 5px;
+  }
+
+  &__field {
+    padding-left: 0;
+
+    font-size: @font-size-base;
+    line-height: @line-height-xsmall;
+    text-align: right;
+  }
+}
+
+.stats__legend--top {
+  display: none;
+}
+
+.stats__legend--bottom {
+  padding-top: 20px;
+  padding-bottom: 24px;
+
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: @bg-color-darkgrey;
+}
+
+@media (min-width: @screen-md) {
+  .stats {
+    background-color: @bg-color-stats;
+  }
+
+  .stats__wrapper {
+    position: relative;
+    z-index: 1;
+
+    margin-top: -184px;
+  }
+
+  .stats__header {
+    .clearfix();
+
+    position: relative;
+
+    min-height: 184px;
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: -15px;
+
+      border: 15px solid transparent;
+      border-bottom-color: @color-white;
+      transform: rotate(45deg);
+    }
+  }
+
+  .stats__slogan {
+    float: left;
+    width: 320px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+
+    font-size: @font-size-extra;
+    line-height: @line-height-big;
+    text-align: left;
+    text-transform: none;
+  }
+
+  .stats__intro {
+    float: right;
+    width: 290px;
+    padding: 0;
+    padding-top: 4px;
+    padding-right: 80px;
+
+    text-align: left;
+  }
+
+  .stats__legend--top {
+    display: block;
+    float: left;
+    clear: left;
+    width: 280px;
+    padding-left: 40px;
+
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .stats__legend--bottom {
+    display: none;
+  }
+
+  .stats__table {
+    .clearfix();
+
+    display: block;
+  }
+
+  .stats__table tr {
+    display: block;
+    float: left;
+    width: 320px;
+    padding: 25px 35px;
+    padding-bottom: 28px;
+  }
+
+  .stats__value,
+  .stats__field {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+
+  .stats__value {
+    margin-bottom: 7px;
+
+    font-size: @font-size-huge;
+    line-height: @line-height-huge;
+  }
+
+  .stats__field {
+    font-size: @font-size-medium;
+    line-height: @line-height-base;
+    text-align: left;
+  }
+
+  .stats__field br {
+    display: none;
+  }
+}
+
+@media (min-width: @screen-xl) {
+  .stats__wrapper {
+    .clearfix();
+
+    margin-top: -159px;
+  }
+
+  .stats__header {
+    float: left;
+    width: 320px;
+    min-height: 318px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      top: 22px;
+    }
+  }
+
+  .stats__slogan {
+    float: none;
+    width: auto;
+    margin-bottom: 42px;
+    padding-left: 0;
+  }
+
+  .stats__intro {
+    float: none;
+    width: auto;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-right: 30px;
+  }
+
+  .stats__legend--top {
+    float: none;
+    width: auto;
+    padding-left: 0;
+  }
+
+  .stats__table {
+    float: left;
+    display: block;
+    width: 640px;
+  }
+}

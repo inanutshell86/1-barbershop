@@ -1,0 +1,26 @@
+.slider__toggles {
+  text-align: center;
+}
+
+.slider__control {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 19px;
+  border: 1px solid @color-white;
+
+  background-color: transparent;
+
+  font-size: 0;
+  transform: rotate(45deg);
+  transition: background-color 0.2s;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--reviews {
+    border-color: #939290;
+  }
+}
